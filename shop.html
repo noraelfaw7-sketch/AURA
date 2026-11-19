@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>المتجر والتشكيلات | AURA Accessories</title>
+  
+  <meta name="description" content="تسوقي جميع تشكيلات أورا للإكسسوارات والمجوهرات الراقية في مصر. سلاسل، خواتم، أساور، ساعات نسائية ونظارات شمسية مطلية بذهب عيار 18 وفضة 925." />
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Main Luxury Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body dir="rtl" data-page="shop">
+
+  <!-- ========================================================================
+       1. Top Announcement Bar
+       ======================================================================== -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <span class="announcement-tag">AURA EXCLUSIVE</span>
+      <span data-i18n="announcement">✨ شحن مجاني للطلبات أكثر من 1000 ج.م لجميع المحافظات | كود الخصم: AURA10</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. Sticky Luxury Header & Navigation
+       ======================================================================== -->
+  <header class="header-wrapper">
+    <div class="container header-main">
+      
+      <!-- Mobile Hamburger Button -->
+      <button class="action-btn mobile-toggle" id="mobile-menu-btn" aria-label="Open Menu">
+        <span>☰</span>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="logo-container">
+        <span class="logo-brand">AURA<span>.</span></span>
+        <span class="logo-sub">JEWELRY & ACCESSORIES</span>
+      </a>
+
+      <!-- Desktop Navigation Categories -->
+      <nav>
+        <ul class="nav-categories">
+          <li><a href="index.html" class="nav-link" data-i18n="navHome">الرئيسية</a></li>
+          <li><a href="shop.html" class="nav-link active" data-i18n="navCatalog">المتجر والتشكيلات</a></li>
+          <li><a href="shop.html?cat=necklaces" class="nav-link" data-i18n="navNecklaces">سلاسل</a></li>
+          <li><a href="shop.html?cat=rings" class="nav-link" data-i18n="navRings">خواتم</a></li>
+          <li><a href="shop.html?cat=bracelets" class="nav-link" data-i18n="navBracelets">أساور</a></li>
+          <li><a href="shop.html?cat=watches" class="nav-link" data-i18n="navWatches">ساعات</a></li>
+          <li><a href="shop.html?cat=sunglasses" class="nav-link" data-i18n="navSunglasses">نظارات شمسية</a></li>
+          <li><a href="checkout.html" class="nav-link" data-i18n="navCheckout" style="color: var(--color-gold-hover); font-weight: 700;">إتمام الطلب</a></li>
+        </ul>
+      </nav>
+
+      <!-- Instant Live Search Bar -->
+      <div class="header-search">
+        <div class="search-input-wrap">
+          <input 
+            type="text" 
+            id="header-search-input" 
+            class="search-input" 
+            placeholder="ابحثي عن قطعة أحلامك (ذهب، لوتس، زمرد)..." 
+            data-i18n-placeholder="searchPlaceholder" 
+            autocomplete="off" 
+          />
+          <span class="search-icon">🔍</span>
+        </div>
+        <div class="search-results-dropdown" id="search-results-dropdown"></div>
+      </div>
+
+      <!-- Action Utilities -->
+      <div class="header-actions">
+        <button class="lang-switcher" id="lang-switch-btn" title="Toggle Language">
+          <span class="lang-flag">🌐</span>
+          <span id="lang-btn-text">English</span>
+        </button>
+
+        <button class="action-btn" id="wishlist-trigger-btn" title="قائمة أمنياتكِ">
+          <span>🤍</span>
+          <span class="badge-counter" id="wishlist-counter">0</span>
+        </button>
+
+        <button class="action-btn" id="cart-trigger-btn" title="حقيبة التسوق">
+          <span>🛍️</span>
+          <span class="badge-counter" id="cart-counter">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <div class="logo-brand">AURA<span>.</span></div>
+      <button class="close-btn" id="mobile-nav-close">✕</button>
+    </div>
+    
+    <div class="search-input-wrap" style="width: 100%;">
+      <input type="text" id="mobile-search-input" class="search-input" placeholder="ابحثي عن قطعة أحلامك..." />
+      <span class="search-icon">🔍</span>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link" data-i18n="navHome">الرئيسية <span>←</span></a></li>
+      <li><a href="shop.html" class="mobile-nav-link" data-i18n="navCatalog">المتجر والتشكيلات <span>←</span></a></li>
+      <li><a href="shop.html?cat=necklaces" class="mobile-nav-link" data-i18n="navNecklaces">سلاسل <span>←</span></a></li>
+      <li><a href="shop.html?cat=rings" class="mobile-nav-link" data-i18n="navRings">خواتم <span>←</span></a></li>
+      <li><a href="shop.html?cat=bracelets" class="mobile-nav-link" data-i18n="navBracelets">أساور <span>←</span></a></li>
+      <li><a href="shop.html?cat=watches" class="mobile-nav-link" data-i18n="navWatches">ساعات <span>←</span></a></li>
+      <li><a href="shop.html?cat=sunglasses" class="mobile-nav-link" data-i18n="navSunglasses">نظارات شمسية <span>←</span></a></li>
+      <li><a href="checkout.html" class="mobile-nav-link" data-i18n="navCheckout" style="color: var(--color-gold-hover); font-weight: 700;">إتمام الطلب <span>←</span></a></li>
+    </ul>
+
+    <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--color-sand-border);">
+      <button class="btn-primary" id="mobile-cart-trigger" style="width: 100%; justify-content: center;">
+        <span>🛍️ حقيبة التسوق (<span id="mobile-cart-counter">0</span>)</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       3. Shop Hero Banner & Breadcrumbs
+       ======================================================================== -->
+  <section style="background: var(--color-surface-card); border-bottom: 1px solid var(--color-sand-border); padding: 2.5rem 0 2rem;">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav style="font-size: 0.825rem; color: var(--color-charcoal-light); margin-bottom: 0.75rem;">
+        <a href="index.html" style="color: var(--color-charcoal); font-weight: 600;">الرئيسية</a>
+        <span style="margin: 0 0.4rem;">/</span>
+        <span style="color: var(--color-gold-hover); font-weight: 700;">المتجر والتشكيلات الكاملة</span>
+      </nav>
+
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h1 class="heading-serif" style="font-size: 2.25rem; color: var(--color-charcoal); margin-bottom: 0.35rem;">
+            كتالوج أورا الملكي
+          </h1>
+          <p style="color: var(--color-charcoal-muted); font-size: 0.95rem; max-width: 600px;">
+            تصفحي جميع القطع والإكسسوارات المصممة يدوياً بطلاء ذهب عيار 18، فضة استرليني 925، ومقاومة الماء بنسبة 100%.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="checkout.html" class="btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem; text-decoration: none;">
+            <span>🛒 الذهاب لحقيبة التسوق</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. Product Catalog: Filters & Full Grid
+       ======================================================================== -->
+  <main class="catalog-section" id="catalog-section" style="padding-top: 2.5rem;">
+    <div class="container">
+
+      <!-- Filter Controls Toolbar -->
+      <div class="catalog-toolbar">
+        
+        <!-- Category Filter Chips -->
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all" data-i18n="filterAll">الكل</button>
+          <button class="filter-btn" data-filter="necklaces" data-i18n="navNecklaces">سلاسل</button>
+          <button class="filter-btn" data-filter="rings" data-i18n="navRings">خواتم</button>
+          <button class="filter-btn" data-filter="bracelets" data-i18n="navBracelets">أساور</button>
+          <button class="filter-btn" data-filter="watches" data-i18n="navWatches">ساعات</button>
+          <button class="filter-btn" data-filter="sunglasses" data-i18n="navSunglasses">نظارات شمسية</button>
+        </div>
+
+        <!-- Secondary Filters: Material, Price, Sort -->
+        <div class="secondary-filters">
+          
+          <select id="material-select" class="custom-select" aria-label="Select Material">
+            <option value="all" data-i18n="filterAll">جميع الخامات</option>
+            <option value="gold_plated" data-i18n="filterGoldPlated">مطلي ذهب عيار 18</option>
+            <option value="silver_925" data-i18n="filterSilver925">فضة إسترليني 925</option>
+            <option value="stainless_steel" data-i18n="filterStainlessSteel">ستانلس ستيل مقاوم للماء</option>
+          </select>
+
+          <div class="price-filter-wrap">
+            <span data-i18n="filterPrice">السعر حتى:</span>
+            <input 
+              type="range" 
+              id="price-slider" 
+              class="price-range-slider" 
+              min="800" 
+              max="3500" 
+              step="50" 
+              value="3500" 
+            />
+            <span class="price-display-pill" id="price-slider-val">3,500 ج.م</span>
+          </div>
+
+          <select id="sort-select" class="custom-select" aria-label="Sort Catalog">
+            <option value="featured" data-i18n="sortFeatured">الأكثر تميزاً</option>
+            <option value="price-low" data-i18n="sortPriceLowHigh">السعر: من الأقل للأعلى</option>
+            <option value="price-high" data-i18n="sortPriceHighLow">السعر: من الأعلى للأقل</option>
+            <option value="rating" data-i18n="sortRating">الأعلى تقييماً</option>
+          </select>
+
+        </div>
+
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="products-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Styling Concierge Consultation Callout Banner -->
+      <div style="background: var(--color-charcoal); color: var(--color-canvas); border: 1px solid var(--color-gold); border-radius: var(--radius-lg); padding: 2.5rem; margin-top: 4rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <span style="color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">AURA STYLING SALON</span>
+          <h3 class="heading-serif" style="font-size: 1.6rem; color: #FFF; margin: 0.35rem 0;">هل تحتاجين لمساعدة في تنسيق واختيار إطلالتكِ؟</h3>
+          <p style="color: #D4D1C8; font-size: 0.9rem; max-width: 550px;">خبراء أورا متاحون عبر واتساب لمساعدتكِ في اختيار المقاس المناسب، وتنسيق الأطقم للإهداء أو السهرات.</p>
+        </div>
+        <a href="https://wa.me/201002345678?text=مرحباً%20أورا،%20أود%20المساعدة%20في%20اختيار%20وتنسيق%20مجوهرات" target="_blank" class="btn-primary" style="background: #25D366; color: #FFF; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); text-decoration: none;">
+          <span>💬 استشيري خبيرة أورا عبر واتساب</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       5. Product Quick-View / Details Modal
+       ======================================================================== -->
+  <div class="modal-wrapper" id="quickview-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="qv-close-btn" aria-label="Close modal">✕</button>
+
+      <div class="quickview-layout">
+        
+        <div class="qv-gallery">
+          <div class="qv-main-img-box">
+            <img id="qv-main-image" class="qv-main-img" src="" alt="Product View" />
+          </div>
+          <div class="qv-thumbs-row" id="qv-thumbs"></div>
+        </div>
+
+        <div class="qv-details">
+          <span class="qv-sku" id="qv-sku">SKU: AUR-000</span>
+          <h2 class="qv-title heading-serif" id="qv-title">اسم القطعة</h2>
+          
+          <div class="qv-price-row">
+            <span class="qv-price" id="qv-price">0 ج.م</span>
+            <span class="qv-original-price" id="qv-orig-price">0 ج.م</span>
+          </div>
+
+          <div class="qv-stock-badge">
+            <span class="stock-dot"></span>
+            <span data-i18n="inStock">متوفر في المخزن - جاهز للشحن الفوري</span>
+          </div>
+
+          <div class="qv-option-group">
+            <div class="qv-option-label">
+              <span data-i18n="quickViewSelectSize">المقاس:</span>
+            </div>
+            <div class="qv-chips" id="qv-sizes"></div>
+          </div>
+
+          <div class="qv-option-group">
+            <div class="qv-option-label">
+              <span data-i18n="quickViewSelectColor">اللون / اللمسة:</span>
+            </div>
+            <div class="qv-chips" id="qv-colors"></div>
+          </div>
+
+          <div class="qv-actions-row">
+            <div class="qty-counter" style="padding: 0.35rem;">
+              <button class="qty-btn" id="qv-qty-dec" style="width: 32px; height: 32px;">-</button>
+              <span class="qty-value" id="qv-qty-value" style="width: 36px; font-size: 1rem;">1</span>
+              <button class="qty-btn" id="qv-qty-inc" style="width: 32px; height: 32px;">+</button>
+            </div>
+
+            <button class="btn-qv-add" id="qv-add-cart-btn">
+              <span>🛍️</span>
+              <span data-i18n="addToCart">أضف للسلة</span>
+            </button>
+          </div>
+
+          <div class="qv-tabs-nav">
+            <div class="qv-tab-link active" data-tab="specs" data-i18n="quickViewTabSpecs">المواصفات والتفاصيل</div>
+            <div class="qv-tab-link" data-tab="care" data-i18n="quickViewTabCare">إرشادات العناية</div>
+            <div class="qv-tab-link" data-tab="shipping" data-i18n="quickViewTabShipping">الشحن والضمان</div>
+          </div>
+
+          <div class="qv-tab-pane active" id="qv-pane-specs"></div>
+          <div class="qv-tab-pane" id="qv-pane-care"></div>
+          <div class="qv-tab-pane" id="qv-pane-shipping"></div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       6. Slide-Out Shopping Cart Drawer
+       ======================================================================== -->
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <h3 class="cart-title">
+        <span>🛍️</span>
+        <span data-i18n="cartTitle">حقيبة التسوق</span>
+      </h3>
+      <button class="close-btn" id="cart-close-btn" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="free-shipping-bar">
+      <div class="shipping-msg" id="free-shipping-msg">
+        أنتِ على بعد 250 ج.م من الشحن المجاني!
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="free-shipping-progress" style="width: 60%;"></div>
+      </div>
+    </div>
+
+    <div class="cart-items-body" id="cart-items-body"></div>
+
+    <div class="cart-footer">
+      <div class="promo-box">
+        <input 
+          type="text" 
+          id="promo-input" 
+          class="promo-input" 
+          placeholder="أدخلي الكود (AURA10)" 
+          data-i18n-placeholder="promoCodePlaceholder" 
+        />
+        <button class="promo-apply-btn" id="apply-promo-btn" data-i18n="promoCodeApply">تطبيق</button>
+      </div>
+
+      <div class="totals-row">
+        <span data-i18n="subtotal">المجموع الفرعي:</span>
+        <span id="cart-subtotal">0 ج.م</span>
+      </div>
+
+      <div class="totals-row" id="cart-discount-row" style="display: none; color: var(--color-success); font-weight: 600;">
+        <span data-i18n="discount">خصم الكوبون:</span>
+        <span id="cart-discount">-0 ج.م</span>
+      </div>
+
+      <div class="totals-row">
+        <span data-i18n="shipping">الشحن المقدر:</span>
+        <span id="cart-shipping">65 ج.م</span>
+      </div>
+
+      <div class="totals-row final">
+        <span data-i18n="total">الإجمالي النهائي:</span>
+        <span id="cart-total" style="color: var(--color-gold-hover);">0 ج.م</span>
+      </div>
+
+      <button class="btn-checkout-drawer" id="btn-checkout-drawer">
+        <span>🔒</span>
+        <span data-i18n="checkoutButton">متابعة إتمام الطلب</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Universal Backdrops -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <div class="drawer-backdrop" id="modal-backdrop"></div>
+
+  <!-- ========================================================================
+       7. Footer
+       ======================================================================== -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="logo-brand">AURA<span>.</span></h3>
+          <p data-i18n="footerBrandDesc">
+            العلامة المصرية الأولى المتخصصة في تقديم الإكسسوارات والمجوهرات الفاخرة بأسعار معقولة ولمسات ملوك وسيدات المجتمع.
+          </p>
+          <div style="display: flex; gap: 0.85rem; font-size: 1.25rem;">
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+            <a href="#" aria-label="Pinterest">📌</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerQuickLinks">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="navHome">الصفحة الرئيسية</a></li>
+            <li><a href="shop.html" data-i18n="navCatalog">المتجر والتشكيلات</a></li>
+            <li><a href="shop.html?cat=necklaces" data-i18n="catNecklaces">سلاسل وعقود</a></li>
+            <li><a href="shop.html?cat=rings" data-i18n="catRings">خواتم ومحابس</a></li>
+            <li><a href="shop.html?cat=bracelets" data-i18n="catBracelets">أساور وبناجل</a></li>
+            <li><a href="shop.html?cat=watches" data-i18n="catWatches">ساعات فاخرة</a></li>
+            <li><a href="shop.html?cat=sunglasses" data-i18n="catSunglasses">نظارات شمسية</a></li>
+            <li><a href="checkout.html" data-i18n="navCheckout">إتمام الطلب والدفع</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerPolicies">السياسات والضمان</h4>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الاستبدال والاسترجاع (14 يوماً)</a></li>
+            <li><a href="#">ضمان الذهب والفضة لمدة عام</a></li>
+            <li><a href="#">إرشادات العناية بالمجوهرات</a></li>
+            <li><a href="#">الشحن لجميع محافظات مصر</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerContact">تواصلي مع خبرائنا</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span data-i18n="footerAddress">الزمالك، القاهرة، جمهورية مصر العربية</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span dir="ltr" data-i18n="footerPhone">+20 100 234 5678</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <span data-i18n="footerEmail">concierge@aura-accessories.eg</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footerCopyright">© 2025 أورا للإكسسوارات (AURA Accessories). جميع الحقوق محفوظة.</p>
+        <div class="payment-badges-row">
+          <span class="pay-badge">Meeza ميزة</span>
+          <span class="pay-badge">InstaPay إنستاباي</span>
+          <span class="pay-badge">Vodafone Cash</span>
+          <span class="pay-badge">Visa</span>
+          <span class="pay-badge">Mastercard</span>
+          <span class="pay-badge">Cash on Delivery</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp & Notifications -->
+  <a 
+    href="https://wa.me/201002345678?text=مرحباً%20أورا%20للإكسسوارات،%20أود%20الاستفسار%20عن%20التشكيلة%20الجديدة" 
+    target="_blank" 
+    class="floating-whatsapp" 
+    id="whatsapp-concierge" 
+    aria-label="WhatsApp Concierge"
+  >
+    <span style="font-size: 1.3rem;">💬</span>
+    <span data-i18n="conciergeBtn">خدمة العملاء | واتساب</span>
+  </a>
+
+  <div class="social-proof-toast" id="social-proof-toast">
+    <div class="sp-icon">👑</div>
+    <div class="sp-text" id="sp-text"></div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
