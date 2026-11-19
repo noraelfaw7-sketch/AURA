@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>حقيبة التسوق وإتمام الطلب | AURA Accessories</title>
+  
+  <meta name="description" content="إتمام طلبك الفاخر من أورا للإكسسوارات والمجوهرات مع شحن سريع وتغليف ملكي مجاني لجميع محافظات مصر." />
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Main Luxury Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body dir="rtl" data-page="checkout">
+
+  <!-- ========================================================================
+       1. Top Announcement Bar
+       ======================================================================== -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <span class="announcement-tag">AURA EXCLUSIVE</span>
+      <span data-i18n="announcement">✨ شحن مجاني للطلبات أكثر من 1000 ج.م لجميع المحافظات | كود الخصم: AURA10</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. Sticky Luxury Header & Navigation
+       ======================================================================== -->
+  <header class="header-wrapper">
+    <div class="container header-main">
+      
+      <button class="action-btn mobile-toggle" id="mobile-menu-btn" aria-label="Open Menu">
+        <span>☰</span>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="logo-container">
+        <span class="logo-brand">AURA<span>.</span></span>
+        <span class="logo-sub">JEWELRY & ACCESSORIES</span>
+      </a>
+
+      <!-- Desktop Navigation Categories -->
+      <nav>
+        <ul class="nav-categories">
+          <li><a href="index.html" class="nav-link" data-i18n="navHome">الرئيسية</a></li>
+          <li><a href="shop.html" class="nav-link" data-i18n="navCatalog">المتجر والتشكيلات</a></li>
+          <li><a href="shop.html?cat=necklaces" class="nav-link" data-i18n="navNecklaces">سلاسل</a></li>
+          <li><a href="shop.html?cat=rings" class="nav-link" data-i18n="navRings">خواتم</a></li>
+          <li><a href="shop.html?cat=bracelets" class="nav-link" data-i18n="navBracelets">أساور</a></li>
+          <li><a href="shop.html?cat=watches" class="nav-link" data-i18n="navWatches">ساعات</a></li>
+          <li><a href="shop.html?cat=sunglasses" class="nav-link" data-i18n="navSunglasses">نظارات شمسية</a></li>
+          <li><a href="checkout.html" class="nav-link active" data-i18n="navCheckout" style="color: var(--color-gold-hover); font-weight: 700;">إتمام الطلب</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search Bar -->
+      <div class="header-search">
+        <div class="search-input-wrap">
+          <input 
+            type="text" 
+            id="header-search-input" 
+            class="search-input" 
+            placeholder="ابحثي عن قطعة أحلامك..." 
+            data-i18n-placeholder="searchPlaceholder" 
+            autocomplete="off" 
+          />
+          <span class="search-icon">🔍</span>
+        </div>
+        <div class="search-results-dropdown" id="search-results-dropdown"></div>
+      </div>
+
+      <!-- Action Utilities -->
+      <div class="header-actions">
+        <button class="lang-switcher" id="lang-switch-btn" title="Toggle Language">
+          <span class="lang-flag">🌐</span>
+          <span id="lang-btn-text">English</span>
+        </button>
+
+        <button class="action-btn" id="wishlist-trigger-btn" title="قائمة أمنياتكِ">
+          <span>🤍</span>
+          <span class="badge-counter" id="wishlist-counter">0</span>
+        </button>
+
+        <button class="action-btn" id="cart-trigger-btn" title="حقيبة التسوق">
+          <span>🛍️</span>
+          <span class="badge-counter" id="cart-counter">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <div class="logo-brand">AURA<span>.</span></div>
+      <button class="close-btn" id="mobile-nav-close">✕</button>
+    </div>
+    
+    <div class="search-input-wrap" style="width: 100%;">
+      <input type="text" id="mobile-search-input" class="search-input" placeholder="ابحثي عن قطعة أحلامك..." />
+      <span class="search-icon">🔍</span>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link" data-i18n="navHome">الرئيسية <span>←</span></a></li>
+      <li><a href="shop.html" class="mobile-nav-link" data-i18n="navCatalog">المتجر والتشكيلات <span>←</span></a></li>
+      <li><a href="shop.html?cat=necklaces" class="mobile-nav-link" data-i18n="navNecklaces">سلاسل <span>←</span></a></li>
+      <li><a href="shop.html?cat=rings" class="mobile-nav-link" data-i18n="navRings">خواتم <span>←</span></a></li>
+      <li><a href="shop.html?cat=bracelets" class="mobile-nav-link" data-i18n="navBracelets">أساور <span>←</span></a></li>
+      <li><a href="shop.html?cat=watches" class="mobile-nav-link" data-i18n="navWatches">ساعات <span>←</span></a></li>
+      <li><a href="shop.html?cat=sunglasses" class="mobile-nav-link" data-i18n="navSunglasses">نظارات شمسية <span>←</span></a></li>
+      <li><a href="checkout.html" class="mobile-nav-link" data-i18n="navCheckout" style="color: var(--color-gold-hover); font-weight: 700;">إتمام الطلب <span>←</span></a></li>
+    </ul>
+
+    <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--color-sand-border);">
+      <button class="btn-primary" id="mobile-cart-trigger" style="width: 100%; justify-content: center;">
+        <span>🛍️ حقيبة التسوق (<span id="mobile-cart-counter">0</span>)</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       3. Main Checkout Page Container
+       ======================================================================== -->
+  <main class="container" style="padding-top: 2.5rem; padding-bottom: 5rem;" id="full-checkout-page">
+    
+    <!-- Breadcrumb -->
+    <nav style="font-size: 0.85rem; color: var(--color-charcoal-light); margin-bottom: 1.25rem;">
+      <a href="index.html" style="color: var(--color-charcoal); font-weight: 600;">الرئيسية</a>
+      <span style="margin: 0 0.4rem;">/</span>
+      <a href="shop.html" style="color: var(--color-charcoal); font-weight: 600;">المتجر</a>
+      <span style="margin: 0 0.4rem;">/</span>
+      <span style="color: var(--color-gold-hover); font-weight: 700;">حقيبة التسوق وإتمام الطلب</span>
+    </nav>
+
+    <!-- Empty State -->
+    <div id="checkout-empty-state" style="display: none; text-align: center; padding: 5rem 1rem; background: var(--color-surface-card); border-radius: var(--radius-lg); border: 1px solid var(--color-sand-border);">
+      <div style="font-size: 3.5rem; margin-bottom: 1rem;">🛍️</div>
+      <h2 class="heading-serif" style="font-size: 1.75rem; margin-bottom: 0.5rem;" data-i18n="cartEmpty">حقيبة التسوق فارغة حالياً</h2>
+      <p style="color: var(--color-charcoal-muted); margin-bottom: 2rem;" data-i18n="cartEmptyDesc">استمتعي باكتشاف مجموعتنا المختارة وأضيفي لمستكِ الخاصة</p>
+      <a href="shop.html" class="btn-primary" style="padding: 1rem 2.5rem; font-size: 1rem; text-decoration: none;">
+        <span>تصفحي تشكيلات المتجر</span>
+        <span>←</span>
+      </a>
+    </div>
+
+    <!-- Active Checkout Grid -->
+    <div id="checkout-content-grid" style="display: grid; grid-template-columns: 1fr 380px; gap: 2.5rem; align-items: start;">
+      
+      <!-- Left Column: Cart Items Table + Delivery & Payment Form -->
+      <div>
+        
+        <!-- Cart Items Box -->
+        <div style="background: var(--color-surface-white); border: 1px solid var(--color-sand-border); border-radius: var(--radius-md); padding: 1.75rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; border-bottom: 1px solid var(--color-sand-border); padding-bottom: 0.75rem;">
+            <h3 class="heading-serif" style="font-size: 1.35rem; color: var(--color-charcoal);">1. مراجعة محتويات حقيبة التسوق</h3>
+            <a href="shop.html" style="font-size: 0.85rem; color: var(--color-gold-hover); font-weight: 600; text-decoration: underline;">+ إضافة قطع أخرى</a>
+          </div>
+
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--color-sand-border); font-size: 0.8rem; color: var(--color-charcoal-light);">
+                <th style="text-align: start; padding-bottom: 0.5rem;">القطعة</th>
+                <th style="text-align: center; padding-bottom: 0.5rem;">الكمية</th>
+                <th style="text-align: end; padding-bottom: 0.5rem;">الإجمالي</th>
+                <th style="text-align: end; padding-bottom: 0.5rem;"></th>
+              </tr>
+            </thead>
+            <tbody id="checkout-table-body">
+              <!-- Rendered dynamically by app.js -->
+            </tbody>
+          </table>
+
+          <!-- Promo Code Form Inside Checkout -->
+          <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px dashed var(--color-sand-border); display: flex; gap: 0.65rem; max-width: 420px;">
+            <input 
+              type="text" 
+              id="page-promo-input" 
+              class="promo-input" 
+              placeholder="كود الخصم (AURA10)" 
+              data-i18n-placeholder="promoCodePlaceholder" 
+              style="padding: 0.65rem 1rem;"
+            />
+            <button class="promo-apply-btn" id="page-apply-promo-btn" style="padding: 0.65rem 1.5rem;">تطبيق</button>
+          </div>
+        </div>
+
+        <!-- Form: Delivery Information -->
+        <form id="page-checkout-form" style="background: var(--color-surface-white); border: 1px solid var(--color-sand-border); border-radius: var(--radius-md); padding: 2rem; box-shadow: var(--shadow-sm);">
+          
+          <h3 class="heading-serif" style="font-size: 1.35rem; color: var(--color-charcoal); margin-bottom: 1.25rem; border-bottom: 1px solid var(--color-sand-border); padding-bottom: 0.75rem;">
+            2. عنوان التوصيل وبيانات المستلم (في مصر)
+          </h3>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <div class="form-group">
+              <label class="form-label" data-i18n="fullNameLabel">الاسم ثلاثي *</label>
+              <input type="text" id="page-checkout-name" class="form-input" placeholder="مثال: نورا أحمد حسن" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="phoneLabel">رقم الهاتف المحمول (واتساب) *</label>
+              <input type="tel" id="page-checkout-phone" class="form-input" placeholder="010XXXXXXXX أو 011 / 012 / 015" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="governorateLabel">المحافظة (حساب رسوم وموعد الشحن التلقائي) *</label>
+            <select id="page-checkout-governorate" class="form-select" required>
+              <!-- Dynamic Governorates -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="addressLabel">العنوان بالتفصيل *</label>
+            <textarea id="page-checkout-address" class="form-textarea" placeholder="اسم المنطقة أو الحي، اسم الشارع، رقم العمارة، رقم الشقة أو الطابق، وأقرب علامة مميزة" required></textarea>
+          </div>
+
+          <!-- Royal Gift Packaging Box -->
+          <div style="background: var(--color-surface-card); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--color-sand-border); margin: 1.5rem 0;">
+            <h4 class="checkout-step-title" style="margin-bottom: 0.5rem;">
+              <span>🎁</span> تغليف الهدايا الملكي المجاني
+            </h4>
+            <label style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9rem; font-weight: 600; cursor: pointer;">
+              <input type="checkbox" id="page-checkout-gift-box" checked style="accent-color: var(--color-gold);" />
+              <span>أريد تغليف هدايا ملكي مجاناً في كيس أورا المخملي مع بطاقة إهداء</span>
+            </label>
+            <div style="margin-top: 0.75rem;">
+              <input type="text" id="page-checkout-gift-msg" class="form-input" placeholder="رسالة الإهداء (تُكتب بخط عربي يدوي راقٍ)..." />
+            </div>
+          </div>
+
+          <!-- Payment Methods -->
+          <h3 class="heading-serif" style="font-size: 1.35rem; color: var(--color-charcoal); margin: 1.5rem 0 1rem; border-bottom: 1px solid var(--color-sand-border); padding-bottom: 0.75rem;">
+            3. طريقة الدفع المفضلة
+          </h3>
+
+          <div class="payment-methods-grid">
+            <div class="payment-method-card active">
+              <input type="radio" name="paymentMethod" value="cod" class="payment-radio" checked />
+              <div class="payment-info">
+                <h5 data-i18n="paymentCod">الدفع عند الاستلام (Cash on Delivery)</h5>
+                <p data-i18n="paymentCodDesc">ادفعي نقداً لمندوب الشحن عند استلام وفحص طلبيتكِ بعناية</p>
+              </div>
+            </div>
+
+            <div class="payment-method-card">
+              <input type="radio" name="paymentMethod" value="instapay" class="payment-radio" />
+              <div class="payment-info">
+                <h5 data-i18n="paymentInstapay">إنستاباي / فودافون كاش (InstaPay / E-Wallet)</h5>
+                <p data-i18n="paymentInstapayDesc">تحويل فوري بدون رسوم لحساب أورا المعتمد: aura@instapay أو 01012345678</p>
+              </div>
+            </div>
+
+            <div class="payment-method-card">
+              <input type="radio" name="paymentMethod" value="card" class="payment-radio" />
+              <div class="payment-info">
+                <h5 data-i18n="paymentCard">بطاقة بنكية (Visa / MasterCard / ميزة)</h5>
+                <p data-i18n="paymentCardDesc">دفع مشفر وآمن بالكامل يدعم جميع البنوك المصرية</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Order Button -->
+          <button type="submit" class="btn-primary" style="width: 100%; margin-top: 2rem; padding: 1.1rem; font-size: 1.1rem; justify-content: center;">
+            <span>👑</span>
+            <span>تأكيد الطلب الفاخر الآن</span>
+          </button>
+        </form>
+
+      </div>
+
+      <!-- Right Column: Order Financial Summary -->
+      <div>
+        <div style="background: var(--color-surface-white); border: 1px solid var(--color-sand-border); border-radius: var(--radius-md); padding: 1.75rem; box-shadow: var(--shadow-sm); position: sticky; top: 100px;">
+          <h4 class="heading-serif" style="font-size: 1.25rem; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--color-sand-border);">
+            ملخص الحساب
+          </h4>
+
+          <div class="totals-row">
+            <span data-i18n="subtotal">المجموع الفرعي:</span>
+            <span id="page-checkout-subtotal">0 ج.م</span>
+          </div>
+
+          <div class="totals-row" id="page-checkout-discount-row" style="display: none; color: var(--color-success); font-weight: 600;">
+            <span data-i18n="discount">خصم الكوبون:</span>
+            <span id="page-checkout-discount">-0 ج.م</span>
+          </div>
+
+          <div class="totals-row">
+            <span data-i18n="shipping">رسوم التوصيل للمحافظة:</span>
+            <span id="page-checkout-shipping">45 ج.م</span>
+          </div>
+
+          <div class="totals-row final" style="font-size: 1.35rem; margin-top: 1rem;">
+            <span data-i18n="total">الإجمالي النهائي:</span>
+            <span id="page-checkout-total" style="color: var(--color-gold-hover);">0 ج.م</span>
+          </div>
+
+          <!-- Trust Badges List -->
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-sand-border); display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.8rem; color: var(--color-charcoal-muted);">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span>🛡️</span>
+              <span>ضمان شامل ضد تغير اللون والعيوب لمدة عام كامل</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span>🔄</span>
+              <span>استرجاع واستبدال مجاني خلال 14 يوماً وفق القانون المصري</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span>🔒</span>
+              <span>حماية وتشفير تام لكافة بياناتك ومعلوماتك الشخصية</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ========================================================================
+       4. Footer
+       ======================================================================== -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="logo-brand">AURA<span>.</span></h3>
+          <p data-i18n="footerBrandDesc">
+            العلامة المصرية الأولى المتخصصة في تقديم الإكسسوارات والمجوهرات الفاخرة بأسعار معقولة ولمسات ملوك وسيدات المجتمع.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerQuickLinks">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="navHome">الصفحة الرئيسية</a></li>
+            <li><a href="shop.html" data-i18n="navCatalog">المتجر والتشكيلات</a></li>
+            <li><a href="checkout.html" data-i18n="navCheckout">إتمام الطلب والدفع</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerPolicies">السياسات والضمان</h4>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الاستبدال والاسترجاع (14 يوماً)</a></li>
+            <li><a href="#">ضمان الذهب والفضة لمدة عام</a></li>
+            <li><a href="#">إرشادات العناية بالمجوهرات</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerContact">تواصلي مع خبرائنا</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span data-i18n="footerAddress">الزمالك، القاهرة، جمهورية مصر العربية</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span dir="ltr" data-i18n="footerPhone">+20 100 234 5678</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <span data-i18n="footerEmail">concierge@aura-accessories.eg</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footerCopyright">© 2025 أورا للإكسسوارات (AURA Accessories). جميع الحقوق محفوظة.</p>
+        <div class="payment-badges-row">
+          <span class="pay-badge">Meeza ميزة</span>
+          <span class="pay-badge">InstaPay إنستاباي</span>
+          <span class="pay-badge">Vodafone Cash</span>
+          <span class="pay-badge">Visa</span>
+          <span class="pay-badge">Mastercard</span>
+          <span class="pay-badge">Cash on Delivery</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Backdrops and Drawer -->
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <h3 class="cart-title">
+        <span>🛍️</span>
+        <span data-i18n="cartTitle">حقيبة التسوق</span>
+      </h3>
+      <button class="close-btn" id="cart-close-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div class="free-shipping-bar">
+      <div class="shipping-msg" id="free-shipping-msg">أنتِ على بعد 250 ج.م من الشحن المجاني!</div>
+      <div class="progress-track"><div class="progress-fill" id="free-shipping-progress" style="width: 60%;"></div></div>
+    </div>
+    <div class="cart-items-body" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <div class="totals-row"><span data-i18n="total">الإجمالي:</span><span id="cart-total">0 ج.م</span></div>
+      <a href="checkout.html" class="btn-checkout-drawer" style="text-decoration: none;"><span>🔒</span><span>إتمام الطلب</span></a>
+    </div>
+  </aside>
+  
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <div class="drawer-backdrop" id="modal-backdrop"></div>
+
+  <!-- Floating WhatsApp & Notifications -->
+  <a 
+    href="https://wa.me/201002345678?text=مرحباً%20أورا%20للإكسسوارات،%20أود%20المساعدة%20في%20إتمام%20الطلب" 
+    target="_blank" 
+    class="floating-whatsapp" 
+    id="whatsapp-concierge" 
+    aria-label="WhatsApp Concierge"
+  >
+    <span style="font-size: 1.3rem;">💬</span>
+    <span data-i18n="conciergeBtn">خدمة العملاء | واتساب</span>
+  </a>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
